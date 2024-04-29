@@ -23,17 +23,17 @@ class StoreProduksiRequest extends FormRequest
     {
         if (request()->isMethod('post')) {
             return [
-                'tanggal_produksi' => 'required|string',
-                'jumlah_telur' => 'required|numeric',
-                'berat_total' => 'required|numeric',
-                'harga_telur' => 'required|numeric',
+                'tanggal_produksi' => 'nullable|string',
+                'jumlah_telur' => 'nullable|numeric',
+                'berat_total' => 'nullable|numeric',
+                'harga_telur' => 'nullable|numeric',
             ];
         } else {
             return [
-                'tanggal_produksi' => 'required|string',
-                'jumlah_telur' => 'required|numeric',
-                'berat_total' => 'required|numeric',
-                'harga_telur' => 'required|numeric',
+                'tanggal_produksi' => 'nullable|string',
+                'jumlah_telur' => 'nullable|numeric',
+                'berat_total' => 'nullable|numeric',
+                'harga_telur' => 'nullable|numeric',
             ];
         }
     }

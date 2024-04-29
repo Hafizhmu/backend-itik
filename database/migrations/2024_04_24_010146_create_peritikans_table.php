@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('peritikans', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal');
-            $table->integer('jumlah_penambahan');
-            $table->integer('jumlah_kematian');
-            $table->integer('jumlah_sakit');
-            $table->integer('jumlah_total');
+            $table->date('tanggal')->nullable();
+            $table->integer('jumlah_penambahan')->nullable();
+            $table->integer('jumlah_kematian')->nullable();
+            $table->integer('jumlah_sakit')->nullable();
+            $table->integer('jumlah_total')->nullable();
             $table->timestamps();
         });
     }

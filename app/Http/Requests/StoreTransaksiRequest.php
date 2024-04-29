@@ -23,19 +23,19 @@ class StoreTransaksiRequest extends FormRequest
     {
         if (request()->isMethod('post')) {
             return [
-                'tanggal_transaksi' => 'required|string',
-                'nama_pembeli' => 'required|string',
-                'alamat_pembeli' => 'required|string',
-                'jumlah_telur' => 'required|integer',
-                'harga_jual' => 'required|integer',
+                'tanggal_transaksi' => 'nullable|string',
+                'nama_pembeli' => 'nullable|string',
+                'alamat_pembeli' => 'nullable|string',
+                'jumlah_telur' => 'nullable|integer',
+                'harga_jual' => 'nullable|integer',
             ];
         } else {
             return [
-                'tanggal_transaksi' => 'required|string',
-                'nama_pembeli' => 'required|string',
-                'alamat_pembeli' => 'required|string',
-                'jumlah_telur' => 'required|integer',
-                'harga_jual' => 'required|integer',
+                'tanggal_transaksi' => 'nullable|string',
+                'nama_pembeli' => 'nullable|string',
+                'alamat_pembeli' => 'nullable|string',
+                'jumlah_telur' => 'nullable|integer',
+                'harga_jual' => 'nullable|integer',
             ];
         }
     }

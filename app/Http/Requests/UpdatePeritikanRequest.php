@@ -23,19 +23,19 @@ class UpdatePeritikanRequest extends FormRequest
     {
         if (request()->isMethod('put')) {
             return [
-                'tanggal' => 'required|string',
-                'jumlah_penambahan' => 'required|integer',
-                'jumlah_kematian' => 'required|integer',
-                'jumlah_sakit' => 'required|integer',
-                'jumlah_total' => 'required|integer'
+                'tanggal' => 'nullable|string',
+                'jumlah_penambahan' => 'nullable|integer',
+                'jumlah_kematian' => 'nullable|integer',
+                'jumlah_sakit' => 'nullable|integer',
+                'jumlah_total' => 'nullable|integer'
             ];
         } else {
             return [
-                'tanggal' => 'required|string',
-                'jumlah_penambahan' => 'required|integer',
-                'jumlah_kematian' => 'required|integer',
-                'jumlah_sakit' => 'required|integer',
-                'jumlah_total' => 'required|integer'
+                'tanggal' => 'nullable|string',
+                'jumlah_penambahan' => 'nullable|integer',
+                'jumlah_kematian' => 'nullable|integer',
+                'jumlah_sakit' => 'nullable|integer',
+                'jumlah_total' => 'nullable|integer'
             ];
         }
     }

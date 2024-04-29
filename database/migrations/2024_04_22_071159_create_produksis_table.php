@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('produksis', function (Blueprint $table) {
             $table->id();
-            $table->integer('jumlah_telur');
-            $table->double('berat_total');
-            $table->double('harga_telur');
-            $table->date('tanggal_produksi');
+            $table->integer('jumlah_telur')->nullable();
+            $table->double('berat_total')->nullable();
+            $table->double('harga_telur')->nullable();
+            $table->date('tanggal_produksi')->nullable();
             $table->timestamps();
         });
     }

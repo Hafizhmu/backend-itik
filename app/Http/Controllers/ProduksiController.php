@@ -6,6 +6,7 @@ use App\Models\Produksi;
 use App\Http\Resources\ProduksiResource;
 use App\Http\Requests\StoreProduksiRequest;
 use App\Http\Requests\UpdateProduksiRequest;
+use App\Models\Transaksi;
 
 class ProduksiController extends Controller
 {
@@ -65,11 +66,21 @@ class ProduksiController extends Controller
     {
         //
     }
+    public function stok()
+    {
+        $produksi = Produksi::sum('jumlah_telur');
+
+        $transaksi = Transaksi::sum('jumlah_telur');
+
+        $stok = $produksi - $transaksi;
+
+        return response()->json($stok, 200);
+    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProduksiRequest $request,$id)
+    public function update(UpdateProduksiRequest $request, $id)
     {
         try {
             $update = Produksi::find($id);

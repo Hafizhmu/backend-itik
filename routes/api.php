@@ -18,6 +18,8 @@ Route::get('transaksi', [TransaksiController::class, 'index']);
 Route::get('produksi', [ProduksiController::class, 'index']);
 //route untuk get table overall
 Route::get('peritikan', [PeritikanController::class, 'index']);
+//route untuk get table overall
+Route::get('stok', [ProduksiController::class, 'stok']);
 
 
 //route untuk get table overall
