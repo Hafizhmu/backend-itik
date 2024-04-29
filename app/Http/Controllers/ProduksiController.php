@@ -74,7 +74,7 @@ class ProduksiController extends Controller
 
         $stok = $produksi - $transaksi;
 
-        return response()->json($stok, 200);
+        return response()->json(['data' => $stok], 200);
     }
 
     /**
